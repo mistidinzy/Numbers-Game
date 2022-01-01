@@ -28,13 +28,13 @@ namespace Numbers_Game
             Console.WriteLine("Hello! Give me a number greater than zero, please.");
 
             string userInput = Console.ReadLine();
-            Console.WriteLine("You chose " + userInput + ".");
+            Console.WriteLine($"You chose { userInput}.");
 
             try
             {
                 //convert the user’s input to an integer
                 int userInputNumber = Convert.ToInt32(userInput);
-                Console.WriteLine("The array will have " + userInput + " numbers in it.");
+                Console.WriteLine($"The array will have...{userInput} numbers in it.");
 
                 //Instantiate a new integer array that is the size the user just inputted.
                 int[] newArray = new int[userInputNumber];
@@ -44,11 +44,11 @@ namespace Numbers_Game
 
                 //Capture the sum by calling the GetSum method
                 int captureSum = GetSum(populatedArray);
-                Console.WriteLine("The sum is " + captureSum + ".");
-
+                Console.WriteLine($"The sum of all of the numbers in your array is... {captureSum}.");
 
                 //Capture the product by calling the GetProduct method
-                //int captureProduct = GetProduct(populatedArray, theSum);
+                int captureProduct = GetProduct(populatedArray, captureSum);
+                Console.WriteLine($"The product is... {captureProduct}.");
 
                 //Capture the quotient by calling the GetQuotient method
                 //int captureQuotient = GetQuotient();
@@ -100,6 +100,25 @@ namespace Numbers_Game
             }
 
             return sum;
+        }
+
+        static int GetProduct(int[] intArr, int sum)
+        {
+            //Ask the user to select a number between 1 & the length of the integer array.
+            Console.WriteLine($"Please choose a number between 1 and { intArr.Length - 1}.");
+
+            string userInput = Console.ReadLine();
+            Console.WriteLine("You chose " + userInput + ". Whichever number is in that array position will be what we multiply against the sum.");
+
+            Console.WriteLine("Checking the value...");
+
+            int indexPosition = Convert.ToInt32(userInput);
+            Console.WriteLine("The value in that position is " + intArr[indexPosition] + ".");
+
+            Console.WriteLine("Calculating the product...");
+
+            int product = sum * indexPosition;            
+            return product;
         }
     }
 }
