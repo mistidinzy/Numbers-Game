@@ -135,7 +135,7 @@ namespace Numbers_Game
             Console.WriteLine(" ");
 
             int product = sum * intArr[indexPosition];
-            Console.WriteLine($"The product is {sum * intArr[indexPosition]}.");
+            //Console.WriteLine($"The product is {sum * intArr[indexPosition]}.");
             return product;
         }
 
