@@ -113,29 +113,29 @@ namespace Numbers_Game
         static int GetProduct(int[] intArr, int sum)
         {
             //Ask the user to select a number between 1 & the length of the integer array.
-            Console.WriteLine($"Please choose a number between 1 and { intArr.Length - 1}.");
+            Console.WriteLine($"Please choose a number between 1 and {intArr.Length - 1}.");
             Console.WriteLine(" ");
 
             string userInput = Console.ReadLine();
             Console.WriteLine(" ");
 
-            Console.WriteLine("You chose " + userInput + ". Whichever number is in that array position will be what we multiply against the sum.");
+            Console.WriteLine($"You chose {userInput}. Whichever number is in that array position will be what we multiply against the sum.");
             Console.WriteLine(" ");
 
             Console.WriteLine("Checking the value...");
             Console.WriteLine(" ");
 
             int indexPosition = Convert.ToInt32(userInput);
-            Console.WriteLine(intArr[indexPosition]);
 
-            Console.WriteLine("The value in that position is " + intArr[indexPosition] + ".");
+            Console.WriteLine($"The value in that position is {intArr[indexPosition]}.");
             Console.WriteLine(" ");
 
 
             Console.WriteLine("Calculating the product...");
             Console.WriteLine(" ");
 
-            int product = sum * indexPosition;            
+            int product = sum * intArr[indexPosition];
+            Console.WriteLine($"The product is {sum * intArr[indexPosition]}.");
             return product;
         }
 
