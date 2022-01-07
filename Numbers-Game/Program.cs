@@ -10,12 +10,10 @@ namespace Numbers_Game
             {
                 StartSequence();
             }
-            //Generic Exception
             catch (Exception ex)
             {
                 Console.WriteLine($"...I'm sorry. Something went wrong here. {ex.Message}");
             }
-            //include a finally that tells us that the program is completed.
             finally
             {
                 Console.WriteLine($"--------------------------------------------------------------------");
@@ -28,7 +26,6 @@ namespace Numbers_Game
 
         static void StartSequence()
         {
-            //prompt the user to “Enter a number greater than zero”
             Console.WriteLine($"--------------------------------------------------------------------");
             Console.WriteLine($"|                                                                  |");
             Console.WriteLine($"|                          NUMBERS GAME                            |");
