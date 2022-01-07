@@ -81,8 +81,6 @@ namespace Numbers_Game
                 Console.WriteLine($"|                     The program has completed!                   |");
                 Console.WriteLine($"|                                                                  |");
                 Console.WriteLine($"--------------------------------------------------------------------");
-
-
                 Console.WriteLine($" ");
                 Console.WriteLine($"                        ...In Conclusion...                         ");
                 Console.WriteLine($" ");
@@ -96,7 +94,6 @@ namespace Numbers_Game
                 Console.WriteLine($" ");
                 Console.WriteLine($"                          The quotient was:                         ");
                 Console.WriteLine($"                          {captureQuotient}                         ");
-                Console.WriteLine($" ");
                 Console.WriteLine($" ");
                 Console.WriteLine($"--------------------------------------------------------------------");
                 Console.WriteLine($"|                                                                  |");
